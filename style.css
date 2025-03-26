@@ -1,0 +1,129 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --dark-grey: #222;
+    --grey: #555;
+    --light-grey: #777;
+    --white-grey: #eeeeee;
+    --white: #fff;
+}
+
+body, .container, .plate, .lamp {
+    display: flex;
+    align-items: center;
+    justify-content: center; /*^v*/
+}
+
+body {
+    background-color: var(--dark-grey);
+    height: max-content;/*<-->*/
+}
+
+.container {
+    flex-direction: row-reverse;
+    justify-content: space-between;
+    height: 100%;
+    width: 50%;
+}
+
+.plate {
+height: 100px;
+width: 100px;
+border: 3px solid black;
+border-radius: 10px;
+background-color: var(--white-grey);
+}
+
+.switch {
+    height: 45px;
+    width: 30px;
+    cursor: pointer;
+    margin-bottom: 5px;
+    border: 2px solid black;
+    border-radius: 6px;
+    background: linear-gradient(180deg, var(--light-grey) 0%, var(--white) 32%);
+}
+
+*switch.on {
+    margin-top: 5px;
+    background: linear-gradient(0deg, var(--light-grey) 0%, var(--white) 32%);
+}
+
+.lamp {
+    flex-direction: column;
+    justify-content: start;
+    height: 100%;
+    width: 50%;
+}
+
+.support {
+    width: 200px;
+    height: 50px;
+    background: black;
+    transform: translateY(-30%);
+    border-radius: 0 0 100px 100px;
+}
+
+.string {
+    width: 5px;
+    height: 300px;
+    background: rgb(0, 0, 0);
+    transform: translateY(-5%);
+    margin-bottom: -20px;
+    z-index: -1;
+}
+
+.bulb-socket {
+    width: 140px;
+    background: black;
+    border-width: 80px 0 0 0;
+    border-style: solid;
+    border-color: black;
+    border-radius: 30px 30px 0 0;
+}
+
+.bulb {
+    width: 200px;
+    height: 200px;
+    background: var(--grey);
+    border-radius: 50%;
+}   
+
+.bulb::before {
+    content: "";
+    position: absolute;
+    transform: translateX(50%);
+    transform: translateY(-40);
+    width: 100px;
+    height: 50px;
+    background: var(--grey);
+    z-index: -1;
+}
+
+.bulb.on {
+    box-shadow: 
+    0 0 100px var(--white),
+    0 0 120px var(--white);
+    background-color: white;
+}
+
+.bulb.on::before {
+    background: var(--white);
+}
+
+@media screen and (max-width: 768px) {
+    .container {
+        flex-direction: column-reverse;
+    }
+
+    .plate {
+        margin-top: 100px;
+    }
+}
+
+
+
