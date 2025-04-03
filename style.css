@@ -12,15 +12,20 @@
     --white: #fff;
 }
 
-body, .container, .plate, .lamp {
+body,
+.container,
+.plate,
+.lamp {
     display: flex;
     align-items: center;
-    justify-content: center; /*^v*/
+    justify-content: center;
+    /*^v*/
 }
 
 body {
     background-color: var(--dark-grey);
-    height: max-content;/*<-->*/
+    height: max-content;
+    /*<-->*/
 }
 
 .container {
@@ -31,11 +36,11 @@ body {
 }
 
 .plate {
-height: 100px;
-width: 100px;
-border: 3px solid black;
-border-radius: 10px;
-background-color: var(--white-grey);
+    height: 100px;
+    width: 100px;
+    border: 3px solid black;
+    border-radius: 10px;
+    background-color: var(--white);
 }
 
 .switch {
@@ -91,7 +96,7 @@ background-color: var(--white-grey);
     height: 200px;
     background: var(--grey);
     border-radius: 50%;
-}   
+}
 
 .bulb::before {
     content: "";
@@ -105,9 +110,9 @@ background-color: var(--white-grey);
 }
 
 .bulb.on {
-    box-shadow: 
-    0 0 100px var(--white),
-    0 0 120px var(--white);
+    box-shadow:
+        0 0 100px var(--white),
+        0 0 120px var(--white);
     background-color: white;
 }
 
@@ -124,6 +129,3 @@ background-color: var(--white-grey);
         margin-top: 100px;
     }
 }
-
-
-

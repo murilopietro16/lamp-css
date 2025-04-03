@@ -1,12 +1,14 @@
 <!DOCTYPE html>
 <html lang="pt-br">
-
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="icon" type="image/png" sizes="32x32" href="/assets/icon.png">
   <link rel="stylesheet" href="style.css">
   <title>Light Bulb</title>
+  <style>
+
+  </style>
 </head>
 
 <body>
@@ -19,9 +21,23 @@
       <div class="support"></div>
       <div class="string"></div>
       <div class="bulb-socket"></div>
-      <div class="bulb on"></div>
+      <div class="bulb"></div>
     </div>
   </div>
-</body>
 
+  <script>
+    let lampadaLigada = false;
+
+    function turnLights() {
+      lampadaLigada = !lampadaLigada;
+      const bulb = document.querySelector('.bulb');
+
+      if (lampadaLigada) {
+        bulb.classList.add('on');
+      } else {
+        bulb.classList.remove('on');
+      }
+    }
+  </script>
+</body>
 </html>
